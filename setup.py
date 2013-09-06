@@ -1,0 +1,26 @@
+#!/usr/bin/env python
+
+from distutils.core import setup
+
+readme = open("README.md", "r")
+
+setup(name='pyroute2',
+      version='0.1.11',
+      description='Python Netlink library',
+      author='Peter V. Saveliev',
+      author_email='peet@redhat.com',
+      url='https://github.com/svinota/pyroute2',
+      license='GPLv2+',
+      packages=['pyroute2',
+                'pyroute2.netlink',
+                'pyroute2.netlink.rtnl',
+                'pyroute2.netlink.plugins'],
+      classifiers=['License :: OSI Approved :: GNU General Public ' +
+                   'License v2 or later (GPLv2+)',
+                   'Programming Language :: Python',
+                   'Topic :: Software Development :: Libraries :: ' +
+                   'Python Modules',
+                   'Operating System :: POSIX',
+                   'Intended Audience :: Developers',
+                   'Development Status :: 4 - Beta'],
+      long_description=readme.read())
